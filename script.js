@@ -5,7 +5,7 @@ function validateForm(event) {
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
 
-    if (!validateUsername(password)) {
+    if (!validateUsername(username)) {
         alert('the password should have Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long.');
         return;
     }
