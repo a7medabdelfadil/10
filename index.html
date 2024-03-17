@@ -12,15 +12,13 @@
 <body>
     <div class="container">
         <h1>Validation Form</h1>
-        <form id="contactForm" onsubmit="validateForm(event)">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password" required>
+        <form onsubmit="validateForm(event)" id="form">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="username" required>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password: </label>
+            <input type="text" name="password" id="password" required>
 
             <button type="submit">Submit</button>
         </form>
