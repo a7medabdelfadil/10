@@ -1,12 +1,12 @@
 function validateForm(event) {
     event.preventDefault();
     
-    const name = document.getElementById('name').value.trim();
+    const username = document.getElementById('username').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
 
-    if (name === '' || email === '' || password === '') {
-        alert('Please fill in all fields.');
+    if (!validateUsername(password)) {
+        alert('the password should have Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters long.');
         return;
     }
 
@@ -22,6 +22,11 @@ function validateForm(event) {
 
     alert('Form submitted successfully!');
     document.getElementById('contactForm').reset();
+}
+
+function validateUsername(username) {
+    const usernameRegex = /^[a-z0-9_-]{3,16}$/;
+    return usernameRegex.test(username)
 }
 
 function validateEmail(email) {
